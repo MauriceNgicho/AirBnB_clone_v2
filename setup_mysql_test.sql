@@ -5,6 +5,6 @@ CREATE USER IF NOT EXISTS 'hbnb_test'@'localhost' IDENTIFIED WITH mysql_native_p
 -- Privilages
 GRANT ALL PRIVILEGES ON hbnb_test_db.* to 'hbnb_test'@'localhost'; 
 -- Select Permissions
-GRANT SELECT perfomance_schema.* to 'hbnb_test'@'localhost';
+GRANT SELECT ON performance_schema.* to 'hbnb_test'@'localhost';
 --Flush Privileges
 FLUSH PRIVILEGES
