@@ -9,8 +9,6 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-from models 
-import classes
 from models.user import User
 
 class DBStorage:
@@ -30,8 +28,8 @@ class DBStorage:
         self.__engine = create_engine(
                 'mysql+mysqldb://{}:{}@{}/{}'
                 .format(sql_user,sql_passwd, sql_host, sql_db),
-                pool_pre_pig=True)
-        if environment == test:
+                pool_pre_ping=True)
+        if environment == "test":
             Base.metadata.drop_all(bind=self.__engine)
 
     def all(self, cls=None):
