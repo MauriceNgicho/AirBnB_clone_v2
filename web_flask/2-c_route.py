@@ -1,6 +1,4 @@
-def c_text(text):
-    """Return 'C' followed by the text variable."""
-    return f"C {text.replace('_', ' ')}"#!/usr/bin/python3
+#!/usr/bin/python3
 """ A script that starts a Flask web application """
 
 
