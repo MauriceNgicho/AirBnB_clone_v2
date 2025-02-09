@@ -35,7 +35,7 @@ def py_text(text="is cool"):
 @app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     """Returns number if its an integer"""
-    return f" {n} is a number"
+    return f"{n} is a number"
 
 
 if __name__ == "__main__":
