@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+def c_text(text):
+    """Return 'C' followed by the text variable."""
+    return f"C {text.replace('_', ' ')}"#!/usr/bin/python3
 """ A script that starts a Flask web application """
 
 
@@ -21,8 +23,8 @@ def hbnb():
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_text(text):
-    """Return text"""
-    return f"C {text.replace('_', ' '}"
+    """Return 'C' followed by the text."""
+    return f"C {text.replace('_', ' ')}"
 
 
 if __name__ == "__main__":
