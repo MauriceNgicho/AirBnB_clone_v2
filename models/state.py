@@ -5,6 +5,7 @@ from sqlalchemy.orm import relationship
 from models.base_model import BaseModel, Base
 import models
 from os import getenv
+from models.city import City
 
 
 class State(BaseModel, Base):
@@ -21,11 +22,7 @@ class State(BaseModel, Base):
         """Returns a list of City instances linked to the State"""
         if getenv('HBNB_TYPE_STORAGE') != 'db':
             return [
-                city for city in models.storage.all("City").values()
+                city for city in models.storage.all(City).values()
                 if city.state_id == self.id
             ]
         return []
-
-
-    
-
