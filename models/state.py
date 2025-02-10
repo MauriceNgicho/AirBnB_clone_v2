@@ -15,7 +15,8 @@ class State(BaseModel, Base):
 
     # Establish a relationship of one-to-many between State and City
     if getenv('HBNB_TYPE_STORAGE') == 'db':
-        cities = relationship('City', backref='state', cascade='all, delete-orphan')
+        cities = relationship('City', backref='state',
+                              cascade='all, delete-orphan')
 
     @property
     def cities(self):
